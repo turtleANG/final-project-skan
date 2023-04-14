@@ -1,0 +1,43 @@
+@import "../app/variables";
+
+.btn {
+  border-radius: 5px;
+  padding: 14px 64px;
+  font-size: 20px;
+  border: 0;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &:disabled {
+    opacity: 0.5;
+
+    &:hover {
+      cursor: auto;
+    }
+  }
+}
+
+.main {
+  background: $azure;
+  color: $white;
+}
+
+.main-active {
+  background: $btnGray;
+  color: $black;
+}
+
+.light-blue {
+  background: $lightBlue;
+  font-size: 14px;
+  padding: 7px 12px;
+  font-weight: 500;
+  color: $black;
+
+  &:hover {
+    background: $turquoise;
+    color: $white;
+  }
+}

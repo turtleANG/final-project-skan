@@ -1,0 +1,48 @@
+@use "../app/mixins" as m;
+@import "../app/variables";
+
+.mainTitle {
+  @include m.mainTitle;
+  margin-bottom: 20px;
+}
+
+.authorization {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 70px;
+
+  @media (max-width: 992px) {
+    flex-direction: column;
+  }
+}
+
+.authorization__form {
+  width: 430px;
+  margin-right: 80px;
+  margin-left: 55px;
+  position: relative;
+
+  @media (max-width: 992px) {
+    margin: 126px 0 49px 0;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: -55px;
+    left: -51px;
+    width: 76px;
+    height: 93px;
+    background: {
+      image: url(/assets/images/lock.svg);
+      position: center center;
+      repeat: no-repeat;
+    }
+
+    @media (max-width: 992px) {
+      top: -81px;
+      left: 81px;
+    }
+  }
+}

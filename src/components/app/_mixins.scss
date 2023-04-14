@@ -1,0 +1,31 @@
+$mainTitleSize: 40px !default;
+$subTitleSize: 30px !default;
+$mainTitleSizeMobile: 28px !default;
+$subTitleSizeMobile: 24px !default;
+
+@mixin mainTitle {
+  font-family: "Ferry";
+  text-transform: uppercase;
+  font-size: $mainTitleSize;
+  letter-spacing: 0.04em;
+
+  @media (max-width: 800px) {
+    font-size: $mainTitleSizeMobile;
+  }
+}
+
+@mixin subTitle {
+  font-family: "Ferry";
+  text-transform: uppercase;
+  font-size: $subTitleSize;
+  letter-spacing: 0.01em;
+
+  @media (max-width: 800px) {
+    font-size: $subTitleSizeMobile;
+  }
+}
+
+@mixin imgFluid {
+  max-width: 100%;
+  height: auto;
+}

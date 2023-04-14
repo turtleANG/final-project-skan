@@ -1,0 +1,44 @@
+@import "../app/variables";
+
+.btn {
+  border-radius: 5px;
+  padding: 14px 64px;
+  font-size: 20px;
+  border: 0;
+  text-align: center;
+  display: inline-block;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.main.width100, .main-active.width100, .light-blue.wigth100 {
+    display: block;
+    padding: 14px;
+    width: 100%;
+}
+
+.main {
+  background: $azure;
+  color: $white;
+}
+
+.main-active {
+  background: $btnGray;
+  color: $black;
+}
+
+.light-blue {
+  background: $lightBlue;
+  font-size: 14px;
+  padding: 7px 12px;
+  font-weight: 500;
+  color: $black;
+
+  &:hover {
+    background: $turquoise;
+    text-decoration: none;
+    color: $white;
+  }
+}

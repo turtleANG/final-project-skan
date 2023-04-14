@@ -1,0 +1,75 @@
+@use "../app/mixins" as m;
+@import "../app/variables";
+
+.mainTitle {
+  @include m.mainTitle;
+  margin-bottom: 20px;
+  z-index: 10;
+  position: relative;
+}
+
+.imgFluid {
+  @include m.imgFluid;
+}
+
+.search__text {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    right: 329px;
+    width: 91px;
+    height: 111px;
+    background: {
+      image: url(/assets/images/document.svg);
+      position: center center;
+      repeat: no-repeat;
+    }
+
+    @media (max-width: 992px) {
+      bottom: 52px;
+      right: 10px;
+      z-index: 5;
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 20px;
+    right: 22px;
+    width: 141px;
+    height: 67px;
+    background: {
+      image: url(/assets/images/folders.svg);
+      position: center center;
+      repeat: no-repeat;
+    }
+
+    @media (max-width: 992px) {
+      display: none;
+    }
+  }
+}
+
+.search__block {
+  display: flex;
+
+  @media (max-width: 992px) {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.search__form {
+  flex: 1 1 auto;
+  margin-right: 80px;
+  margin-top: 47px;
+
+  @media (max-width: 992px) {
+    margin-bottom: 24px;
+    margin-right: 0px;
+  }
+}

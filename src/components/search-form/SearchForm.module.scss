@@ -1,0 +1,115 @@
+@import "../app/variables";
+
+.formBlock {
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+  padding: 25px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  .formLeftBlock {
+    width: 52%;
+
+    @media (max-width: 992px) {
+      width: 100%;
+    }
+  }
+
+  .formRightBlock {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 47%;
+
+    @media (max-width: 992px) {
+      width: 100%;
+    }
+
+    > button {
+      align-self: flex-end;
+    }
+  }
+
+  .formGroup {
+    margin-bottom: 15px;
+    width: fit-content;
+
+    @media (max-width: 992px) {
+      width: 100%;
+    }
+
+    &.checked {
+      .labelCheckbox {
+        color: $black;
+      }
+    }
+  }
+
+  .label,
+  .labelCheckbox {
+    margin-bottom: 15px;
+  }
+
+  .label {
+    display: block;
+    font-size: 14px;
+    color: $black;
+  }
+
+  .labelCheckbox {
+    margin-left: 17px;
+    font-size: 18px;
+    color: $labelGray;
+
+    &.active {
+      color: red;
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .input:not([type=checkbox]),
+  .select {
+    min-width: 242px;
+    border: 1px solid $lightGray;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.05);
+    border-radius: 5px;
+    padding: 12px 15px;
+    margin-bottom: 15px;
+    text-align: center;
+
+    @media (max-width: 992px) {
+      width: 100%;
+    }
+  }
+
+  .select {
+    cursor: pointer;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: {
+      image: url("../../assets/images/arrow_down.svg");
+      repeat: no-repeat;
+      position: 95% 50%;
+    }
+  }
+
+  .errorMsg {
+    margin-top: -15px;
+    margin-bottom: 10px;
+    text-align: center;
+    color: #ff5959;
+    font-size: 14px;
+  }
+
+  .requaredText {
+    width: 100%;
+    text-align: right;
+    color: $labelGray;
+    margin-top: 10px;
+  }
+}

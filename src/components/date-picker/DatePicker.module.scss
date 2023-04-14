@@ -1,0 +1,56 @@
+@import "../app/variables";
+
+.DatePicker {
+  display: flex;
+  align-items: center;
+}
+
+.input {
+  width: 44%;
+  border: 1px solid $lightGray;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.05);
+  border-radius: 5px;
+  padding: 12px 15px;
+
+  &:first-child {
+    margin-right: 10px;
+  }
+}
+
+.calendar {
+  background-color: $white;
+  border: 1px solid $lightGray;
+  border-radius: 5px;
+}
+
+.close {
+  border-radius: 5px;
+  padding: 14px 64px;
+  border: 0;
+  width: 100%;
+  border: 1px solid $turquoise;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.selected {
+  background-color: $turquoise;
+  color: $white;
+  opacity: 0.8;
+
+  &:hover {
+    background-color: $gray;
+    color: $black;
+  }
+}
+
+.today {
+  color: $turquoise;
+  font-weight: 700;
+
+  &.selected {
+    color: $black;
+  }
+}

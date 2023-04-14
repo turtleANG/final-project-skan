@@ -1,0 +1,47 @@
+// .swiper {
+//   overflow: auto;
+// }
+// 
+// .swiper-wrapper {
+//   overflow: hidden;
+//   padding: 0 50px;
+// }
+
+.swiper-slide {
+  padding: 25px 15px;
+}
+
+.swiper-button-prev, .swiper-button-next {
+  &:after {
+    content: "";
+    display: block;
+    background: {
+      position: center center;
+    }
+    height: 40px;
+    width: 40px;
+    opacity: 0.7;
+  }
+}
+
+.swiper-button-prev {
+  &:after {
+    background-image: url(../../assets/images/prev_arrow.svg);
+  }
+}
+
+.swiper-button-next {
+  &:after {
+    background-image: url(../../assets/images/next_arrow.svg);
+  }
+}
+
+.swiper-button-prev.swiper-button-disabled, .swiper-button-next.swiper-button-disabled {
+  opacity: 0.2;
+  // cursor: auto;
+  // pointer-events: none;
+}
+
+.swiper-button-lock {
+  display: block;
+}

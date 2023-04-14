@@ -1,0 +1,50 @@
+@use "../app/mixins" as m with (
+  $mainTitleSize: 60px,
+  $subTitleSize: 45px
+);
+@import "../app/variables";
+
+.jumbotron, .whyWe, .tariffs {
+  margin-bottom: 100px;
+}
+
+.mainTitle {
+  @include m.mainTitle;
+  margin-bottom: 20px;
+}
+
+.jumbotron {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  @media (max-width: 992px) {
+    flex-direction: column;
+  }
+
+  .desc {
+    font-size: 20px;
+    letter-spacing: 0.01em;
+    margin-bottom: 70px;
+  }
+}
+
+.subTitle {
+  @include m.subTitle;
+}
+
+.imgFluid {
+  @include m.imgFluid;
+}
+
+.tariffsList {
+  margin-top: 70px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  @media (max-width: 992px) {
+    flex-direction: column;
+  }
+}
